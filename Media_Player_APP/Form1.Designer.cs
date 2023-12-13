@@ -33,7 +33,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panelToolSubMenu = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnSpeed = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnTool = new System.Windows.Forms.Button();
             this.panelPlaylistSubMenu = new System.Windows.Forms.Panel();
@@ -45,22 +45,28 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnMedia = new System.Windows.Forms.Button();
             this.panel1Logo = new System.Windows.Forms.Panel();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panelSpeedMunu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelToolSubMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
             this.panelMediasubmenu.SuspendLayout();
             this.panel1Logo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.panelSpeedMunu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelMenu.Controls.Add(this.panelSpeedMunu);
             this.panelMenu.Controls.Add(this.button11);
             this.panelMenu.Controls.Add(this.button10);
             this.panelMenu.Controls.Add(this.panelToolSubMenu);
@@ -73,7 +79,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 670);
+            this.panelMenu.Size = new System.Drawing.Size(200, 721);
             this.panelMenu.TabIndex = 0;
             // 
             // button11
@@ -114,7 +120,7 @@
             // 
             // panelToolSubMenu
             // 
-            this.panelToolSubMenu.Controls.Add(this.button8);
+            this.panelToolSubMenu.Controls.Add(this.btnSpeed);
             this.panelToolSubMenu.Controls.Add(this.button9);
             this.panelToolSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelToolSubMenu.Location = new System.Drawing.Point(0, 414);
@@ -122,20 +128,21 @@
             this.panelToolSubMenu.Size = new System.Drawing.Size(200, 97);
             this.panelToolSubMenu.TabIndex = 5;
             // 
-            // button8
+            // btnSpeed
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.LightGray;
-            this.button8.Location = new System.Drawing.Point(0, 49);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(200, 38);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Speed";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSpeed.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSpeed.FlatAppearance.BorderSize = 0;
+            this.btnSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSpeed.ForeColor = System.Drawing.Color.LightGray;
+            this.btnSpeed.Location = new System.Drawing.Point(0, 49);
+            this.btnSpeed.Name = "btnSpeed";
+            this.btnSpeed.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnSpeed.Size = new System.Drawing.Size(200, 38);
+            this.btnSpeed.TabIndex = 1;
+            this.btnSpeed.Text = "Speed";
+            this.btnSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSpeed.UseVisualStyleBackColor = true;
+            this.btnSpeed.Click += new System.EventHandler(this.btnSpeed_Click);
             // 
             // button9
             // 
@@ -298,16 +305,6 @@
             this.panel1Logo.Size = new System.Drawing.Size(200, 80);
             this.panel1Logo.TabIndex = 1;
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(200, 0);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(848, 670);
-            this.axWindowsMediaPlayer1.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -327,11 +324,69 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(200, 0);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(848, 721);
+            this.axWindowsMediaPlayer1.TabIndex = 1;
+            // 
+            // panelSpeedMunu
+            // 
+            this.panelSpeedMunu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelSpeedMunu.Controls.Add(this.button1);
+            this.panelSpeedMunu.Controls.Add(this.button7);
+            this.panelSpeedMunu.Controls.Add(this.button4);
+            this.panelSpeedMunu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSpeedMunu.Location = new System.Drawing.Point(0, 587);
+            this.panelSpeedMunu.Name = "panelSpeedMunu";
+            this.panelSpeedMunu.Size = new System.Drawing.Size(200, 136);
+            this.panelSpeedMunu.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(0, 71);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 32);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "1.5x";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.ForeColor = System.Drawing.SystemColors.Control;
+            this.button7.Location = new System.Drawing.Point(0, 39);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(200, 32);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Normal";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(200, 39);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "0.5x";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 670);
+            this.ClientSize = new System.Drawing.Size(1048, 721);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.panelMenu);
@@ -342,9 +397,10 @@
             this.panelPlaylistSubMenu.ResumeLayout(false);
             this.panelMediasubmenu.ResumeLayout(false);
             this.panel1Logo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.panelSpeedMunu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,7 +416,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panelToolSubMenu;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnSpeed;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnTool;
         private System.Windows.Forms.Panel panelPlaylistSubMenu;
@@ -370,6 +426,10 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panelSpeedMunu;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button4;
     }
 }
 

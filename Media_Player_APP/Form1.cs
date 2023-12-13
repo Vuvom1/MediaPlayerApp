@@ -22,7 +22,8 @@ namespace Media_Player_APP
         {
             panelMediasubmenu.Visible = false;
             panelPlaylistSubMenu.Visible = false; 
-            panelToolSubMenu.Visible = false;           
+            panelToolSubMenu.Visible = false;
+            panelSpeedMunu.Visible = false;
         }
 
         private void hideSubmenu()
@@ -33,6 +34,8 @@ namespace Media_Player_APP
                 panelPlaylistSubMenu.Visible = false;
             if (panelToolSubMenu.Visible == true)
                 panelToolSubMenu.Visible = false;
+            if (panelSpeedMunu.Visible == true)
+                panelSpeedMunu.Visible = false;
         }
 
         private void showSubmenu(Panel SubMenu) 
@@ -64,6 +67,9 @@ namespace Media_Player_APP
             showSubmenu(panelToolSubMenu);
         }
 
-        
+        private void btnSpeed_Click(object sender, EventArgs e)
+        {
+            showSubmenu(panelSpeedMunu);
+        }
     }
 }
