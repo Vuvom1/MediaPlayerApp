@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelSpeedMunu = new System.Windows.Forms.Panel();
+            this.btn15 = new System.Windows.Forms.Button();
+            this.btnNM = new System.Windows.Forms.Button();
+            this.btn05 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panelToolSubMenu = new System.Windows.Forms.Panel();
@@ -47,12 +51,13 @@
             this.panel1Logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrev = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.panelSpeedMunu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelSpeedMunu.SuspendLayout();
             this.panelToolSubMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
             this.panelMediasubmenu.SuspendLayout();
@@ -60,7 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            this.panelSpeedMunu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -82,6 +86,57 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 721);
             this.panelMenu.TabIndex = 0;
             // 
+            // panelSpeedMunu
+            // 
+            this.panelSpeedMunu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelSpeedMunu.Controls.Add(this.btn15);
+            this.panelSpeedMunu.Controls.Add(this.btnNM);
+            this.panelSpeedMunu.Controls.Add(this.btn05);
+            this.panelSpeedMunu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSpeedMunu.Location = new System.Drawing.Point(0, 587);
+            this.panelSpeedMunu.Name = "panelSpeedMunu";
+            this.panelSpeedMunu.Size = new System.Drawing.Size(200, 136);
+            this.panelSpeedMunu.TabIndex = 8;
+            // 
+            // btn15
+            // 
+            this.btn15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn15.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn15.Location = new System.Drawing.Point(0, 71);
+            this.btn15.Name = "btn15";
+            this.btn15.Size = new System.Drawing.Size(200, 32);
+            this.btn15.TabIndex = 3;
+            this.btn15.Text = "1.5x";
+            this.btn15.UseVisualStyleBackColor = false;
+            this.btn15.Click += new System.EventHandler(this.btn15_Click);
+            // 
+            // btnNM
+            // 
+            this.btnNM.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnNM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNM.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNM.Location = new System.Drawing.Point(0, 39);
+            this.btnNM.Name = "btnNM";
+            this.btnNM.Size = new System.Drawing.Size(200, 32);
+            this.btnNM.TabIndex = 5;
+            this.btnNM.Text = "Normal";
+            this.btnNM.UseVisualStyleBackColor = false;
+            this.btnNM.Click += new System.EventHandler(this.btnNM_Click);
+            // 
+            // btn05
+            // 
+            this.btn05.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn05.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn05.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn05.Location = new System.Drawing.Point(0, 0);
+            this.btn05.Name = "btn05";
+            this.btn05.Size = new System.Drawing.Size(200, 39);
+            this.btn05.TabIndex = 4;
+            this.btn05.Text = "0.5x";
+            this.btn05.UseVisualStyleBackColor = false;
+            this.btn05.Click += new System.EventHandler(this.btn05_Click);
+            // 
             // button11
             // 
             this.button11.Dock = System.Windows.Forms.DockStyle.Top;
@@ -99,6 +154,7 @@
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -117,6 +173,7 @@
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panelToolSubMenu
             // 
@@ -276,6 +333,7 @@
             this.button2.Text = "Open File";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnMedia
             // 
@@ -320,9 +378,49 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(200, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(935, 613);
+            this.pictureBox2.Size = new System.Drawing.Size(935, 658);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(1137, 94);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(192, 564);
+            this.listBox1.TabIndex = 4;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Location = new System.Drawing.Point(572, 687);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(71, 32);
+            this.btnNext.TabIndex = 5;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrev
+            // 
+            this.btnPrev.Image = ((System.Drawing.Image)(resources.GetObject("btnPrev.Image")));
+            this.btnPrev.Location = new System.Drawing.Point(465, 686);
+            this.btnPrev.Name = "btnPrev";
+            this.btnPrev.Size = new System.Drawing.Size(71, 35);
+            this.btnPrev.TabIndex = 6;
+            this.btnPrev.UseVisualStyleBackColor = true;
+            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1138, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Danh sách";
             // 
             // axWindowsMediaPlayer1
             // 
@@ -331,68 +429,27 @@
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(200, 0);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(848, 721);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(1141, 721);
             this.axWindowsMediaPlayer1.TabIndex = 1;
-            // 
-            // panelSpeedMunu
-            // 
-            this.panelSpeedMunu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelSpeedMunu.Controls.Add(this.button1);
-            this.panelSpeedMunu.Controls.Add(this.button7);
-            this.panelSpeedMunu.Controls.Add(this.button4);
-            this.panelSpeedMunu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSpeedMunu.Location = new System.Drawing.Point(0, 587);
-            this.panelSpeedMunu.Name = "panelSpeedMunu";
-            this.panelSpeedMunu.Size = new System.Drawing.Size(200, 136);
-            this.panelSpeedMunu.TabIndex = 8;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(0, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "1.5x";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.Location = new System.Drawing.Point(0, 39);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 32);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Normal";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 39);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "0.5x";
-            this.button4.UseVisualStyleBackColor = false;
+            this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 721);
+            this.ClientSize = new System.Drawing.Size(1341, 721);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnPrev);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panelMenu.ResumeLayout(false);
+            this.panelSpeedMunu.ResumeLayout(false);
             this.panelToolSubMenu.ResumeLayout(false);
             this.panelPlaylistSubMenu.ResumeLayout(false);
             this.panelMediasubmenu.ResumeLayout(false);
@@ -400,8 +457,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            this.panelSpeedMunu.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -427,9 +484,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelSpeedMunu;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn15;
+        private System.Windows.Forms.Button btnNM;
+        private System.Windows.Forms.Button btn05;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.Label label1;
     }
 }
 
