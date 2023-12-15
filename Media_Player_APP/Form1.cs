@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Media_Player_APP.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,24 @@ namespace Media_Player_APP
 {
     public partial class Form1 : Form
     {
+        MediaPlayer mediaPlayer = new MediaPlayer();
         public Form1()
         {
             InitializeComponent();
             customizeDesing();
+
+            Loaddata();
+        }
+
+        public void Loaddata()
+        {
+            if (mediaPlayer != null)
+            {
+                foreach (MUSIC music in mediaPlayer.MUSICs)
+                {
+                    listBox1.Items.Add(music.NAME);
+                }
+            }
         }
 
         private void customizeDesing()
@@ -92,6 +107,7 @@ namespace Media_Player_APP
                 foreach (var item in fileNames)
                 {
                     this.listBox1.Items.Add(item);
+
                 }
             }
         }
@@ -101,7 +117,7 @@ namespace Media_Player_APP
             if (listBox1.SelectedIndex != -1)
             {
                 int choose = listBox1.SelectedIndex;
-                axWindowsMediaPlayer1.URL = filePaths[choose];                
+                              
             }
         }
 
@@ -143,9 +159,9 @@ namespace Media_Player_APP
         {
             if (listBox1.SelectedIndex != -1)
             {
-                int choose = listBox1.SelectedIndex;
-                axWindowsMediaPlayer1.URL = filePaths[choose];
-                axWindowsMediaPlayer1.Ctlcontrols.play();
+                //int choose = listBox1.SelectedIndex;
+                //axWindowsMediaPlayer1.URL = filePaths[choose];
+                //axWindowsMediaPlayer1.Ctlcontrols.play();
             }
         }
 
