@@ -1,62 +1,30 @@
-D:\Lap trinh truc quan\Media_Player_APP\bin\Debug\Media_Player_APP.exe.config
-D:\Lap trinh truc quan\Media_Player_APP\bin\Debug\Media_Player_APP.exe
-D:\Lap trinh truc quan\Media_Player_APP\bin\Debug\Media_Player_APP.pdb
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.AssemblyReference.cache
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.Form1.resources
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.Properties.Resources.resources
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.GenerateResource.cache
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CoreCompileInputs.cache
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.exe
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.pdb
-D:\Lap trinh truc quan\Media_Player_APP\bin\Debug\Interop.WMPLib.dll
-D:\Lap trinh truc quan\Media_Player_APP\bin\Debug\AxInterop.WMPLib.dll
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Interop.WMPLib.dll
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\AxInterop.WMPLib.dll
-D:\Lap trinh truc quan\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.ResolveComReference.cache
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe.config
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.pdb
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\bin\Debug\Interop.WMPLib.dll
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.AssemblyReference.cache
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Interop.WMPLib.dll
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\AxInterop.WMPLib.dll
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.ResolveComReference.cache
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form1.resources
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Properties.Resources.resources
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.GenerateResource.cache
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CoreCompileInputs.cache
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.exe
-C:\Users\Mr.T\Source\Repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.pdb
-C:\Users\Mr.T\source\repos\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form2.resources
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe.config
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.pdb
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\Interop.WMPLib.dll
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\AxInterop.WMPLib.dll
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.AssemblyReference.cache
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Interop.WMPLib.dll
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\AxInterop.WMPLib.dll
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.ResolveComReference.cache
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form1.resources
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form2.resources
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Properties.Resources.resources
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.GenerateResource.cache
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CoreCompileInputs.cache
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.exe
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.pdb
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.dll
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.dll
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.xml
-D:\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.xml
-D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CopyComplete
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe.config
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.pdb
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.dll
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Microsoft.Win32.Registry.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Asio.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Core.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Midi.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Wasapi.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.WinForms.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.WinMM.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\System.Security.AccessControl.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\System.Security.Principal.Windows.dll
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.xml
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Microsoft.Win32.Registry.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Asio.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Core.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Midi.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.Wasapi.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.WinForms.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\NAudio.WinMM.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\System.Security.AccessControl.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\System.Security.Principal.Windows.xml
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Interop.WMPLib.dll
 D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\AxInterop.WMPLib.dll
 D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.AssemblyReference.cache
@@ -66,6 +34,7 @@ D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.
 D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.AddMusic.resources
 D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form1.resources
 D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form2.resources
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.FormEdit.resources
 D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Properties.Resources.resources
 D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.GenerateResource.cache
 D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CoreCompileInputs.cache

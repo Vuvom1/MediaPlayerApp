@@ -235,5 +235,15 @@ namespace Media_Player_APP
             Form2 form2 = new Form2();
             form2.Show();           
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormEdit formEdit = new FormEdit();
+
+            formEdit.ShowDialog();
+
+            this.Show();
+        }
     }
 }
