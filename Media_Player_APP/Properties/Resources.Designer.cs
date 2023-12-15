@@ -63,6 +63,16 @@ namespace Media_Player_APP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap choosemusic {
+            get {
+                object obj = ResourceManager.GetObject("choosemusic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thiet_ke_logo_am_nhac_1 {
             get {
                 object obj = ResourceManager.GetObject("thiet-ke-logo-am-nhac-1", resourceCulture);

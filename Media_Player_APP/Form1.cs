@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,25 +16,29 @@ namespace Media_Player_APP
 {
     public partial class Form1 : Form
     {
-        MediaPlayer mediaPlayer = new MediaPlayer();
+        
         public Form1()
         {
             InitializeComponent();
             customizeDesing();
 
-            Loaddata();
+            Load();
         }
 
-        public void Loaddata()
+        public void Load()
         {
+            MediaPlayer mediaPlayer = new MediaPlayer();
+            listBox1.Items.Clear();
+
             if (mediaPlayer != null)
             {
                 foreach (MUSIC music in mediaPlayer.MUSICs)
                 {
                     listBox1.Items.Add(music.NAME);
+
                 }
             }
-        }
+        }        
 
         private void customizeDesing()
         {
@@ -91,33 +97,43 @@ namespace Media_Player_APP
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {     
         }
-        OpenFileDialog openFileDialog;
-        string[] filePaths;
-        string[] fileNames;
+        //OpenFileDialog openFileDialog;
+        //string[] filePaths;
+        //string[] fileNames;
         private void button2_Click(object sender, EventArgs e)
         {
-            openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Mp3 files, mp4 files (*.mp3, *.mp4)|*.mp*";
-            openFileDialog.Multiselect = true;
-            openFileDialog.Title = "Open";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                filePaths = openFileDialog.FileNames;
-                fileNames = openFileDialog.SafeFileNames;
-                foreach (var item in fileNames)
-                {
-                    this.listBox1.Items.Add(item);
+            Form form = new AddMusic();
+            form.Show();
 
-                }
-            }
+            form.FormClosed += (s, args) => Load();
         }
+
+        //đường dãn tương đối
+
+       
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex != -1)
             {
+                MediaPlayer mediaMediaPlayer = new MediaPlayer();
+                List<MUSIC> list = mediaMediaPlayer.MUSICs.ToList();
+
                 int choose = listBox1.SelectedIndex;
-                              
+                {
+                    for (int i =0; i < list.Count; i++)
+                    {
+                        if (choose == i)
+                        {
+                            string filepath = list[i].FILEPATH;
+                            string fileImage = list[i].IMAGE;
+                            Image image = Image.FromFile(fileImage);
+
+                            axWindowsMediaPlayer1.URL = filepath;
+                            ptb_imagemusic.BackgroundImage = image;
+                        }
+                    }
+                }
             }
         }
 
@@ -217,7 +233,7 @@ namespace Media_Player_APP
         private void button10_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            form2.Show();
+            form2.Show();           
         }
     }
 }

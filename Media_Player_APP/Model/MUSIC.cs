@@ -23,6 +23,9 @@ namespace Media_Player_APP.Model
         [StringLength(255)]
         public string FILEPATH { get; set; }
 
+        [StringLength(255)]
+        public string IMAGE { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MUSIC_PLAYLIST> MUSIC_PLAYLIST { get; set; }
     }

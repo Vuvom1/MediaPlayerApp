@@ -50,3 +50,25 @@ D:\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.dll
 D:\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.xml
 D:\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.xml
 D:\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CopyComplete
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe.config
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.exe
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Media_Player_APP.pdb
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\EntityFramework.SqlServer.xml
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\Interop.WMPLib.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\bin\Debug\AxInterop.WMPLib.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.AssemblyReference.cache
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Interop.WMPLib.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\AxInterop.WMPLib.dll
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.ResolveComReference.cache
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.AddMusic.resources
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form1.resources
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Form2.resources
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.Properties.Resources.resources
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.GenerateResource.cache
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CoreCompileInputs.cache
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.csproj.CopyComplete
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.exe
+D:\New folder\MediaPlayerApp\Media_Player_APP\obj\Debug\Media_Player_APP.pdb

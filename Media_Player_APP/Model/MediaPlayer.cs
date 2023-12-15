@@ -27,6 +27,10 @@ namespace Media_Player_APP.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<MUSIC>()
+                .Property(e => e.IMAGE)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MUSIC>()
                 .HasMany(e => e.MUSIC_PLAYLIST)
                 .WithOptional(e => e.MUSIC)
                 .HasForeignKey(e => e.MUSIC_ID);

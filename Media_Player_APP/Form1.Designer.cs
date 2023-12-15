@@ -54,6 +54,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrev = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.ptb_imagemusic = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelSpeedMunu.SuspendLayout();
             this.panelToolSubMenu.SuspendLayout();
@@ -62,6 +63,7 @@
             this.panel1Logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_imagemusic)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -81,7 +83,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(150, 586);
+            this.panelMenu.Size = new System.Drawing.Size(150, 581);
             this.panelMenu.TabIndex = 0;
             // 
             // panelSpeedMunu
@@ -394,10 +396,10 @@
             // 
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(675, 0);
+            this.listBox1.Location = new System.Drawing.Point(673, 0);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(212, 586);
+            this.listBox1.Size = new System.Drawing.Size(212, 581);
             this.listBox1.TabIndex = 4;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
@@ -432,16 +434,26 @@
             this.axWindowsMediaPlayer1.Margin = new System.Windows.Forms.Padding(2);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(525, 586);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(523, 581);
             this.axWindowsMediaPlayer1.TabIndex = 1;
             this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
+            // 
+            // ptb_imagemusic
+            // 
+            this.ptb_imagemusic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ptb_imagemusic.Location = new System.Drawing.Point(150, 0);
+            this.ptb_imagemusic.Name = "ptb_imagemusic";
+            this.ptb_imagemusic.Size = new System.Drawing.Size(524, 536);
+            this.ptb_imagemusic.TabIndex = 7;
+            this.ptb_imagemusic.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 586);
+            this.ClientSize = new System.Drawing.Size(885, 581);
+            this.Controls.Add(this.ptb_imagemusic);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.btnPrev);
             this.Controls.Add(this.btnNext);
@@ -458,6 +470,7 @@
             this.panel1Logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb_imagemusic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,6 +502,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrev;
+        private System.Windows.Forms.PictureBox ptb_imagemusic;
     }
 }
 
