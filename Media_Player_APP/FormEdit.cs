@@ -75,7 +75,10 @@ namespace Media_Player_APP
                 {
                     // Thêm các đường dẫn đã chọn vào danh sách
                     inputFilePath2 = openFileDialog.FileName;
-                    tBAudio2.Text = Path.GetFileName(openFileDialog.FileName);
+                    lbAudio2.Text = Path.GetFileName(openFileDialog.FileName);
+
+                    lbDuration2.Text = Convert.ToString(getTotalDuration(inputFilePath2));
+
                 }
             }
         }
@@ -91,20 +94,20 @@ namespace Media_Player_APP
                 {
                     // Thêm các đường dẫn đã chọn vào danh sách
                     inputFilePath1 = openFileDialog.FileName;
-                    tBAudio1.Text = Path.GetFileName(openFileDialog.FileName);
+                    lbAudio1.Text = Path.GetFileName(openFileDialog.FileName);
+
+                    lbDuration1.Text = Convert.ToString(getTotalDuration(inputFilePath1));
                 }
             }
         }
 
         private void tBAudio2_TextChanged(object sender, EventArgs e)
         {
-            tBDuration2.Text = Convert.ToString(getTotalDuration(inputFilePath2));
 
         }
 
         private void tBAudio1_TextChanged(object sender, EventArgs e)
         {
-            tBDuration1.Text = Convert.ToString(getTotalDuration(inputFilePath1));
         }
 
         private void btnExport_Click(object sender, EventArgs e)
