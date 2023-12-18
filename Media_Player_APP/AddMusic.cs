@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,6 @@ namespace Media_Player_APP
 {
     public partial class AddMusic : Form
     {
-        public MUSIC music = new MUSIC();
        
         OpenFileDialog openFileDialog = new OpenFileDialog();
         string FilePath;
@@ -38,10 +38,9 @@ namespace Media_Player_APP
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 FilePath = openFileDialog.FileName;
-                music.FILEPATH = FilePath;
+
                 // Lấy tên file
                 FileName = openFileDialog.SafeFileName;
-                music.NAME = FileName;
                 tb_namemusic.Text = openFileDialog.FileName;
             }
         }
@@ -57,7 +56,6 @@ namespace Media_Player_APP
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 FileImage = openFileDialog.FileName;
-                music.IMAGE = FileImage;
                 Image image = Image.FromFile(FileImage);
                 ptb_addImage.BackgroundImage = image;
             }
@@ -68,11 +66,10 @@ namespace Media_Player_APP
         private void btn_save_Click(object sender, EventArgs e)
         {
 
-            if (music.FILEPATH != "" && music.IMAGE != "" && music.NAME != "")
+            if (FilePath != "" && FileImage != "" && FileName != "")
             {
-                MediaPlayer mediaPlayer = new MediaPlayer();
-                mediaPlayer.MUSICs.Add(new MUSIC() { FILEPATH = FilePath, IMAGE = FileImage, NAME = FileName });
-                mediaPlayer.SaveChanges();
+                Dataprovider.Ins.mediaPlayer.MUSICs.Add(new MUSIC() { FILEPATH = FilePath, IMAGE = FileImage, NAME = FileName });
+                Dataprovider.Ins.mediaPlayer.SaveChanges();
                 this.Close();
             }
 

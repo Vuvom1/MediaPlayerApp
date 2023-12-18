@@ -1,4 +1,5 @@
 ﻿using Media_Player_APP.Model;
+using Media_Player_APP.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data.Entity;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,18 +29,28 @@ namespace Media_Player_APP
 
         public void Load()
         {
-            MediaPlayer mediaPlayer = new MediaPlayer();
-            listBox1.Items.Clear();
-
-            if (mediaPlayer != null)
+            flpmusic.Controls.Clear();
+            if(Dataprovider.Ins.mediaPlayer.MUSICs != null)
             {
-                foreach (MUSIC music in mediaPlayer.MUSICs)
+                foreach (MUSIC music in Dataprovider.Ins.mediaPlayer.MUSICs)
                 {
-                    listBox1.Items.Add(music.NAME);
-
+                    Image image = Image.FromFile(music.IMAGE);
+                    ItemMusic im = new ItemMusic(music.NAME, image,music.FILEPATH);
+                    im.Tag = music;
+                    im.Click += clickitem;
+                    flpmusic.Controls.Add(im);
                 }
-            }
+            }    
         }        
+
+        public void clickitem(object sender, EventArgs e)
+        {
+            ItemMusic clickedItem = (ItemMusic)sender;
+            MUSIC Musicinfo = (MUSIC)clickedItem.Tag;
+            axWindowsMediaPlayer1.URL = Musicinfo.FILEPATH;
+            Image img = Image.FromFile(Musicinfo.IMAGE);
+            ptb_imagemusic.BackgroundImage = img;
+        }
 
         private void customizeDesing()
         {
@@ -97,44 +109,13 @@ namespace Media_Player_APP
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {     
         }
-        //OpenFileDialog openFileDialog;
-        //string[] filePaths;
-        //string[] fileNames;
-        private void button2_Click(object sender, EventArgs e)
+
+        private void btn_addmusic_Click(object sender, EventArgs e)
         {
             Form form = new AddMusic();
             form.Show();
 
             form.FormClosed += (s, args) => Load();
-        }
-
-        //đường dãn tương đối
-
-       
-
-        private void listBox1_DoubleClick(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedIndex != -1)
-            {
-                MediaPlayer mediaMediaPlayer = new MediaPlayer();
-                List<MUSIC> list = mediaMediaPlayer.MUSICs.ToList();
-
-                int choose = listBox1.SelectedIndex;
-                {
-                    for (int i =0; i < list.Count; i++)
-                    {
-                        if (choose == i)
-                        {
-                            string filepath = list[i].FILEPATH;
-                            string fileImage = list[i].IMAGE;
-                            Image image = Image.FromFile(fileImage);
-
-                            axWindowsMediaPlayer1.URL = filepath;
-                            ptb_imagemusic.BackgroundImage = image;
-                        }
-                    }
-                }
-            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -148,52 +129,51 @@ namespace Media_Player_APP
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex >= 1)
-            {
-                listBox1.SelectedIndex = listBox1.SelectedIndex - 1;
-            }
-            else
-            {
-                listBox1.SelectedIndex = listBox1.Items.Count - 1;
-            }
+            List<MUSIC> list = Dataprovider.Ins.mediaPlayer.MUSICs.ToList();
+
+            //if (listBox1.SelectedIndex >= 1)
+            //{
+            //    listBox1.SelectedIndex = listBox1.SelectedIndex - 1;
+            //    axWindowsMediaPlayer1.URL = list[listBox1.SelectedIndex].FILEPATH;
+            //    string fileImage = list[listBox1.SelectedIndex].IMAGE;
+            //    Image image = Image.FromFile(fileImage);
+
+            //    ptb_imagemusic.BackgroundImage = image;
+            //}
+            //else
+            //{
+            //    listBox1.SelectedIndex = listBox1.Items.Count - 1;
+            //    axWindowsMediaPlayer1.URL = list[listBox1.SelectedIndex].FILEPATH;
+            //}
 
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if(listBox1.SelectedIndex <= listBox1.Items.Count -2)
-            {
-                listBox1.SelectedIndex = listBox1.SelectedIndex + 1;
-            }
-            else
-            {
-                listBox1.SelectedIndex = 0;                 
-            }         
+            //if(listBox1.SelectedIndex <= listBox1.Items.Count -2)
+            //{
+            //    listBox1.SelectedIndex = listBox1.SelectedIndex + 1;
+            //}
+            //else
+            //{
+            //    listBox1.SelectedIndex = 0;                 
+            //}         
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedIndex != -1)
-            {
-                //int choose = listBox1.SelectedIndex;
-                //axWindowsMediaPlayer1.URL = filePaths[choose];
-                //axWindowsMediaPlayer1.Ctlcontrols.play();
-            }
-        }
 
         private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
             if (e.newState == (int)WMPLib.WMPPlayState.wmppsMediaEnded)
             {
-                int currentIndex = listBox1.SelectedIndex;
-                if (currentIndex < listBox1.Items.Count - 1)
-                {
-                    listBox1.SelectedIndex = currentIndex + 1;
-                }
-                else
-                {
-                    listBox1.SelectedIndex = 0;
-                }
+                //int currentIndex = listBox1.SelectedIndex;
+                //if (currentIndex < listBox1.Items.Count - 1)
+                //{
+                //    listBox1.SelectedIndex = currentIndex + 1;
+                //}
+                //else
+                //{
+                //    listBox1.SelectedIndex = 0;
+                //}
             }
         }
 
@@ -245,5 +225,16 @@ namespace Media_Player_APP
 
             this.Show();
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
