@@ -12,7 +12,7 @@ namespace Media_Player_APP.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PLAYLIST()
         {
-            MUSIC_PLAYLIST = new HashSet<MUSIC_PLAYLIST>();
+            MUSICs = new HashSet<MUSIC>();
         }
 
         public int ID { get; set; }
@@ -21,6 +21,6 @@ namespace Media_Player_APP.Model
         public string NAME { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MUSIC_PLAYLIST> MUSIC_PLAYLIST { get; set; }
+        public virtual ICollection<MUSIC> MUSICs { get; set; }
     }
 }

@@ -566,17 +566,6 @@
         AAAL
 </value>
   </data>
-  <data name="btnNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAdCAYAAACwuqxLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cQAAEnEB89x6jgAAARFJREFUSEtjEBdV+E9tjAxGLcCKkQGDp3PqfxieN3chnA3CIMWk8I8cPgamkQHc
-        B3fv3gcLPHjw8L+fTwhYjBQcGZEANgPERgYYFoDA799//k+eNP2/jLQqiiH4MEkWwMC1azf+Ozl4ohiE
-        C5NlAQj8+PHjf3NTx39JcSUUA9Ex2RbAwKlTZ/6bm9qjGIqMKbYABD59+vy/pLgSxWAYpooFMLB3z/7/
-        ejpmtLMABF6/fvM/IS6NdhbAwKaNW/+rqerTzgIQePTo8f+JE6bSzgIYGLoW0DSIaBbJNE2mNMtoNC0q
-        aFbY0bS4plmFQ9MqkxqVPgMyAAkgNz0U5DRR+OjyxPChRkMASIDaGGo0EDAwAABHFP0tzbNX7gAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
   <data name="btnPrev.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAeCAYAAAAy2w7YAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
@@ -586,6 +575,17 @@
         3boDagxhgNMiZIxuUWR4/P/nz19AjSAOkOQjFSWd/4sWLoNqJQ0gWwTDWC2aOGHq/0ePHkO1kQ6I9hGl
         AKdFyJimFtEy6GCY5okBr49olryRMbpFIEy1DIvPR8iYnCIIhkmyCIRJLVTJ8hEMk11NIGNiLIJhkis+
         Un2EjAlV5TBMsUUwjKtxgtVHIBqGqckHsTHiiFaYThYp/AcA+pu39IvQ/e4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAdCAYAAACwuqxLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAARFJREFUSEtjEBdV+E9tjAxGLcCKkQGDp3PqfxieN3chnA3CIMWk8I8cPgamkQHc
+        B3fv3gcLPHjw8L+fTwhYjBQcGZEANgPERgYYFoDA799//k+eNP2/jLQqiiH4MEkWwMC1azf+Ozl4ohiE
+        C5NlAQj8+PHjf3NTx39JcSUUA9Ex2RbAwKlTZ/6bm9qjGIqMKbYABD59+vy/pLgSxWAYpooFMLB3z/7/
+        ejpmtLMABF6/fvM/IS6NdhbAwKaNW/+rqerTzgIQePTo8f+JE6bSzgIYGLoW0DSIaBbJNE2mNMtoNC0q
+        aFbY0bS4plmFQ9MqkxqVPgMyAAkgNz0U5DRR+OjyxPChRkMASIDaGGo0EDAwAABHFP0tzbNX7gAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
 </root>

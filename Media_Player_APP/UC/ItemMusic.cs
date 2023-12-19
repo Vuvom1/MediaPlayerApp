@@ -1,5 +1,4 @@
-﻿using AxWMPLib;
-using Media_Player_APP.Model;
+﻿using Media_Player_APP.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,16 +13,34 @@ namespace Media_Player_APP.UC
 {
     public partial class ItemMusic : UserControl
     {
+        MUSIC Music = new MUSIC();
         public ItemMusic()
         {
             InitializeComponent();
+            Load();
         }
 
-        public ItemMusic(string titlemusic,Image imagemusic,string pathmusic)
+        public void Load()
+        {
+            cbb_playlist.Items.Clear();
+            if(Dataprovider.Ins.mediaPlayer.PLAYLISTs != null)
+            {
+                foreach(PLAYLIST playlist in Dataprovider.Ins.mediaPlayer.PLAYLISTs)
+                {
+                    cbb_playlist.Items.Add(playlist.NAME);
+                }
+            }
+        }
+
+        public ItemMusic(string titlemusic, Image imagemusic, string pathmusic)
         {
             InitializeComponent();
             this.titlemusic = titlemusic;
             this.imagemusic = imagemusic;
+            Load();
+            Music.NAME = titlemusic;
+            Music.FILEPATH = pathmusic;
+
         }
 
         public string titlemusic
@@ -45,6 +62,36 @@ namespace Media_Player_APP.UC
         }
 
         private void lb_titlemusic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ptb_yes_Click(object sender, EventArgs e)
+        {
+            if (cbb_playlist.SelectedItem != null)
+            {
+                string selectedPlaylist = cbb_playlist.SelectedItem.ToString();
+                foreach (PLAYLIST playlist in Dataprovider.Ins.mediaPlayer.PLAYLISTs)
+                {
+                    if (selectedPlaylist == playlist.NAME)
+                    {
+                        foreach (MUSIC music in Dataprovider.Ins.mediaPlayer.MUSICs)
+                        {
+
+                            if (music.NAME == Music.NAME && music.FILEPATH == Music.FILEPATH)
+                            {
+                                playlist.MUSICs.Add(music);
+                                MessageBox.Show("thêm thành công", "thông báo", MessageBoxButtons.OK);
+                                
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void ptb_no_Click(object sender, EventArgs e)
         {
 
         }

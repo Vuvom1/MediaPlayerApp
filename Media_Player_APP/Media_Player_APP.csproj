@@ -115,10 +115,14 @@
     <Compile Include="Model\Dataprovider.cs" />
     <Compile Include="Model\MediaPlayer.cs" />
     <Compile Include="Model\MUSIC.cs" />
-    <Compile Include="Model\MUSIC_PLAYLIST.cs" />
     <Compile Include="Model\PLAYLIST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UC\ItemMusic.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,14 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UC\ItemMusic.resx">
       <DependentUpon>ItemMusic.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +192,9 @@
   <ItemGroup>
     <Content Include="music\ChiuCachMinhNoiThua-RHYDERCoolkidBAN-12449134.mp3" />
     <Content Include="music\MuoiNganNam-PCDuckie-6183024.mp3" />
+    <None Include="picture\checkmarks.png" />
+    <None Include="picture\cancel.png" />
+    <Content Include="picture\10 ngan nam.jpg" />
     <Content Include="Resources\OIP.jpg" />
     <None Include="Resources\10 ngan nam.jpg" />
     <None Include="picture\choosemusic.jpg" />

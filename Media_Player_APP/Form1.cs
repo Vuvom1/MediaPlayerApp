@@ -25,10 +25,12 @@ namespace Media_Player_APP
             customizeDesing();
 
             Load();
+            LoadPlaylist();
         }
 
         public void Load()
         {
+            
             flpmusic.Controls.Clear();
             if(Dataprovider.Ins.mediaPlayer.MUSICs != null)
             {
@@ -41,8 +43,19 @@ namespace Media_Player_APP
                     flpmusic.Controls.Add(im);
                 }
             }    
-        }        
 
+        }        
+        public void LoadPlaylist()
+        {
+            lb_playlist.Items.Clear();
+            if (Dataprovider.Ins.mediaPlayer.PLAYLISTs != null)
+            {
+                foreach (PLAYLIST playlist in Dataprovider.Ins.mediaPlayer.PLAYLISTs)
+                {
+                    lb_playlist.Items.Add(playlist.NAME);
+                }
+            }
+        }
         public void clickitem(object sender, EventArgs e)
         {
             ItemMusic clickedItem = (ItemMusic)sender;
@@ -236,5 +249,78 @@ namespace Media_Player_APP
 
         }
 
+        private void Addplaylist_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tb_addplaylist.Text))
+            {
+                MessageBox.Show("Chưa nhập thông tin", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                bool playlistExists = false;
+
+                foreach (PLAYLIST playlist in Dataprovider.Ins.mediaPlayer.PLAYLISTs)
+                {
+                    if (tb_addplaylist.Text == playlist.NAME)
+                    {
+                        MessageBox.Show("Playlist đã tồn tại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        playlistExists = true;
+                        break; // Không cần kiểm tra tiếp nếu đã tìm thấy playlist trùng khớp
+                    }
+                }
+
+                if (!playlistExists)
+                {
+                    Dataprovider.Ins.mediaPlayer.PLAYLISTs.Add(new PLAYLIST() { NAME = tb_addplaylist.Text });
+                    Dataprovider.Ins.mediaPlayer.SaveChanges();
+                    if(MessageBox.Show("Nhập playlist thành công", "Thông Báo", MessageBoxButtons.OK) == DialogResult.OK)
+                    {
+                        LoadPlaylist();
+                        tb_addplaylist.Text = string.Empty;
+                        this.Refresh();
+                    }
+                }
+            }
+        }
+
+        private void lb_playlist_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void loadPlaylist(PLAYLIST pLAYLIST)
+        {
+                flpmusic.Controls.Clear();
+                if (pLAYLIST.MUSICs != null)
+                {
+                    foreach (MUSIC music in pLAYLIST.MUSICs)
+                    {
+                        Image image = Image.FromFile(music.IMAGE);
+                        ItemMusic im = new ItemMusic(music.NAME, image, music.FILEPATH);
+                        im.Tag = music;
+
+                        im.Click += clickitem;
+                        flpmusic.Controls.Add(im);
+                    }
+                }
+        }
+
+        private void lb_playlist_DoubleClick(object sender, EventArgs e)
+        {
+            
+            if(lb_playlist.SelectedIndex != -1)
+            {
+                int choose = lb_playlist.SelectedIndex;
+                string playlist = lb_playlist.Items[choose].ToString();
+                foreach(PLAYLIST list in Dataprovider.Ins.mediaPlayer.PLAYLISTs)
+                {
+                    if(list.NAME == playlist)
+                    {
+                        loadPlaylist(list);
+                        break;
+                    }
+                }
+            }
+        }
     }
 }
