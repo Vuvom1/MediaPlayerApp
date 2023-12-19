@@ -115,6 +115,7 @@
     <Compile Include="Model\Dataprovider.cs" />
     <Compile Include="Model\MediaPlayer.cs" />
     <Compile Include="Model\MUSIC.cs" />
+    <Compile Include="Model\pathmusic.cs" />
     <Compile Include="Model\PLAYLIST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

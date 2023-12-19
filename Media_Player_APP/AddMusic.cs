@@ -19,14 +19,13 @@ namespace Media_Player_APP
         string FilePath;
         string FileName;
         string FileImage;
+        string pathimage;
 
         public AddMusic()
         {
             InitializeComponent();
         }
-
-
-
+     
         private void btn_addmusic_Click(object sender, EventArgs e)
         {
             openFileDialog.Title = "chọn music";
@@ -38,10 +37,11 @@ namespace Media_Player_APP
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 FilePath = openFileDialog.FileName;
-
                 // Lấy tên file
                 FileName = openFileDialog.SafeFileName;
                 tb_namemusic.Text = openFileDialog.FileName;
+
+
             }
         }
 
@@ -56,6 +56,9 @@ namespace Media_Player_APP
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 FileImage = openFileDialog.FileName;
+
+                pathimage = Path.GetFileName(FileImage); 
+
                 Image image = Image.FromFile(FileImage);
                 ptb_addImage.BackgroundImage = image;
             }
@@ -68,7 +71,7 @@ namespace Media_Player_APP
 
             if (FilePath != "" && FileImage != "" && FileName != "")
             {
-                Dataprovider.Ins.mediaPlayer.MUSICs.Add(new MUSIC() { FILEPATH = FilePath, IMAGE = FileImage, NAME = FileName });
+                Dataprovider.Ins.mediaPlayer.MUSICs.Add(new MUSIC() { FILEPATH = FileName, IMAGE = pathimage, NAME = FileName });
                 Dataprovider.Ins.mediaPlayer.SaveChanges();
                 this.Close();
             }

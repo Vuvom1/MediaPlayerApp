@@ -116,8 +116,8 @@
         #endregion
         public System.Windows.Forms.PictureBox ptb_imgmusic;
         private System.Windows.Forms.Label lb_titlemusic;
-        private System.Windows.Forms.ComboBox cbb_playlist;
         private System.Windows.Forms.PictureBox ptb_yes;
         private System.Windows.Forms.PictureBox ptb_no;
+        public System.Windows.Forms.ComboBox cbb_playlist;
     }
 }

@@ -18,7 +18,7 @@ namespace Media_Player_APP
 {
     public partial class Form1 : Form
     {
-        
+        private int selectedIndex = 0;
         public Form1()
         {
             InitializeComponent();
@@ -28,19 +28,24 @@ namespace Media_Player_APP
             LoadPlaylist();
         }
 
+
         public void Load()
         {
             
             flpmusic.Controls.Clear();
             if(Dataprovider.Ins.mediaPlayer.MUSICs != null)
             {
+                int index = 0;
                 foreach (MUSIC music in Dataprovider.Ins.mediaPlayer.MUSICs)
                 {
-                    Image image = Image.FromFile(music.IMAGE);
+                    pathmusic pathmusic = new pathmusic();
+                    string imgmusic = pathmusic.Loadimg(music.IMAGE);
+                    Image image = Image.FromFile(imgmusic);
                     ItemMusic im = new ItemMusic(music.NAME, image,music.FILEPATH);
                     im.Tag = music;
                     im.Click += clickitem;
                     flpmusic.Controls.Add(im);
+                
                 }
             }    
 
@@ -60,8 +65,11 @@ namespace Media_Player_APP
         {
             ItemMusic clickedItem = (ItemMusic)sender;
             MUSIC Musicinfo = (MUSIC)clickedItem.Tag;
-            axWindowsMediaPlayer1.URL = Musicinfo.FILEPATH;
-            Image img = Image.FromFile(Musicinfo.IMAGE);
+            pathmusic pathMusic = new pathmusic();
+            string path = pathMusic.LoadMusic(Musicinfo.NAME);
+            string imgmusic = pathMusic.Loadimg(Musicinfo.IMAGE);
+            axWindowsMediaPlayer1.URL = path;
+            Image img = Image.FromFile(imgmusic);
             ptb_imagemusic.BackgroundImage = img;
         }
 
@@ -102,6 +110,7 @@ namespace Media_Player_APP
         private void btnMedia_Click(object sender, EventArgs e)
         {
             showSubmenu(panelMediasubmenu);
+            Load();
         }
 
         private void btnPlaylist_Click(object sender, EventArgs e)
@@ -142,37 +151,43 @@ namespace Media_Player_APP
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            List<MUSIC> list = Dataprovider.Ins.mediaPlayer.MUSICs.ToList();
-
-            //if (listBox1.SelectedIndex >= 1)
-            //{
-            //    listBox1.SelectedIndex = listBox1.SelectedIndex - 1;
-            //    axWindowsMediaPlayer1.URL = list[listBox1.SelectedIndex].FILEPATH;
-            //    string fileImage = list[listBox1.SelectedIndex].IMAGE;
-            //    Image image = Image.FromFile(fileImage);
-
-            //    ptb_imagemusic.BackgroundImage = image;
-            //}
-            //else
-            //{
-            //    listBox1.SelectedIndex = listBox1.Items.Count - 1;
-            //    axWindowsMediaPlayer1.URL = list[listBox1.SelectedIndex].FILEPATH;
-            //}
+            if (selectedIndex > 0)
+            {
+                selectedIndex--;
+                PlayMusicAtIndex(selectedIndex);
+            }
 
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            //if(listBox1.SelectedIndex <= listBox1.Items.Count -2)
-            //{
-            //    listBox1.SelectedIndex = listBox1.SelectedIndex + 1;
-            //}
-            //else
-            //{
-            //    listBox1.SelectedIndex = 0;                 
-            //}         
+            if (selectedIndex < Dataprovider.Ins.mediaPlayer.PLAYLISTs.Count() - 1)
+            {
+                selectedIndex++;
+                PlayMusicAtIndex(selectedIndex);
+            }
         }
 
+        public void PlayMusicAtIndex(int index)
+        {
+            MUSIC music = Dataprovider.Ins.mediaPlayer.MUSICs.ToList()[index];
+            pathmusic pathMusic = new pathmusic();
+            string path = pathMusic.LoadMusic(music.NAME);
+            string imgmusic = pathMusic.Loadimg(music.IMAGE);
+            axWindowsMediaPlayer1.URL = path;
+            Image img = Image.FromFile(imgmusic);
+            ptb_imagemusic.BackgroundImage = img;
+
+            // Cập nhật ItemMusic được chọn (nếu cần)
+            foreach (Control control in flpmusic.Controls)
+            {
+                if (control is ItemMusic itemMusic && itemMusic.Tag == music)
+                {
+                    itemMusic.Select(); // Chọn ItemMusic tương ứng
+                    break;
+                }
+            }
+        }
 
         private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
@@ -277,11 +292,14 @@ namespace Media_Player_APP
                     {
                         LoadPlaylist();
                         tb_addplaylist.Text = string.Empty;
-                        this.Refresh();
+                        Load();
+
                     }
                 }
             }
         }
+
+
 
         private void lb_playlist_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -295,10 +313,12 @@ namespace Media_Player_APP
                 {
                     foreach (MUSIC music in pLAYLIST.MUSICs)
                     {
-                        Image image = Image.FromFile(music.IMAGE);
-                        ItemMusic im = new ItemMusic(music.NAME, image, music.FILEPATH);
+                    pathmusic Pathmusic = new pathmusic();
+                        string img = Pathmusic.Loadimg(music.IMAGE);
+                        string pathmusic = Pathmusic.LoadMusic(music.FILEPATH);
+                        Image image = Image.FromFile(img);
+                        ItemMusic im = new ItemMusic(music.NAME, image, pathmusic);
                         im.Tag = music;
-
                         im.Click += clickitem;
                         flpmusic.Controls.Add(im);
                     }
