@@ -29,6 +29,22 @@ This is video demo [Youtube]()
 
 <h3>Description</h3>
 
+Media Player App - Pure software is software used to listen to music. These apps include features such as:
+
+* Create Playlists
+  - Add songs to 1 list. There may be many playlists
+
+* Play and Pause
+  - Play or pause a song
+
+* Next and Previous
+  - Play the next song or play the previous song
+
+* Adjust speed
+  - Can custimize the speed of the song is getting faster or slower
+ 
+* Edit two songs
+  - Select the starting second to the end of the first song and the 2nd song you want to pair. Then combine into 1 song
 
 
 
