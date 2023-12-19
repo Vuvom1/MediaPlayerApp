@@ -9,9 +9,9 @@
 
 <h3>Contributors</h3>
 
-- Leader: Võ Minh Vũ - 21522808 [Github](https://github.com/NDHunq/)
-- Member: Bùi Khánh Đang - 22520187 [Github](https://github.com/nhdhieuu/)
-- Member: Đào Anh Tú - 21522736 [Github](https://github.com/KKuyen/)
+- Leader: Võ Minh Vũ - 21522808 [Github](https://github.com/Vuvom1)
+- Member: Bùi Khánh Đang - 22520187 [Github](https://github.com/22520187)
+- Member: Đào Anh Tú - 21522736 [Github](https://github.com/anhtu301003)
 
 <h3>Supervisors</h3>
 
