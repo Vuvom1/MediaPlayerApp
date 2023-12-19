@@ -50,3 +50,12 @@ Media Player App - Pure software is software used to listen to music. These apps
 
 <h3>How to use</h3>
 
+<h3>License</h3>
+
+Copyright (c) 2023 NDHunq nhdhieuu KKuyen huyhoang462
+
+This project is [MIT](<h3>License</h3>
+
+Copyright (c) 2023 22520187 anhtu301003 Vuvom1
+
+This project is [MIT](https://github.com/Vuvom1/MediaPlayerApp/blob/main/License) licensed
