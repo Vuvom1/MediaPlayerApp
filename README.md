@@ -61,7 +61,7 @@ Media Player App - Pure software is software used to listen to music. These apps
 - Bước 6: Sau khi đã mở "Media_Player_APP.sln", nhấn vào "Start" để bắt đầu chạy chương trình
 
 - Bước 7: 
-     - 7.1: Meia
+     - 7.1: Media
         + Open file để chọn các bài hát từ thư mục đưa vào Media Player App
      - 7.2: Playlist
         + Nhấn vào dấu cộng để thêm playlist
