@@ -107,6 +107,7 @@ namespace Media_Player_APP.UC
                         }
                     }
                 }
+                Dataprovider.Ins.mediaPlayer.SaveChanges();
             }
             if (cbb_playlist.SelectedItem != null)
             {
@@ -129,8 +130,8 @@ namespace Media_Player_APP.UC
                         break;
                     }
                 }
+                Dataprovider.Ins.mediaPlayer.SaveChanges();
             }
-            Dataprovider.Ins.mediaPlayer.SaveChanges();
         }
     }
 }

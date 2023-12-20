@@ -53,22 +53,28 @@ namespace Media_Player_APP
 
             openFileDialog.InitialDirectory = Environment.CurrentDirectory;
 
+            
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 FileImage = openFileDialog.FileName;
-
                 pathimage = Path.GetFileName(FileImage); 
 
                 Image image = Image.FromFile(FileImage);
                 ptb_addImage.BackgroundImage = image;
+                
             }
+
+            
         }
 
 
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-
+            if(pathimage == null)
+            {
+                pathimage = "choosemusic.jpg";
+            }
             if (FilePath != "" && FileImage != "" && FileName != "")
             {
                 Dataprovider.Ins.mediaPlayer.MUSICs.Add(new MUSIC() { FILEPATH = FileName, IMAGE = pathimage, NAME = FileName });

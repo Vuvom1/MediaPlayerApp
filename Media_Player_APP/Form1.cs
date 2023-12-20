@@ -161,7 +161,7 @@ namespace Media_Player_APP
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (selectedIndex < Dataprovider.Ins.mediaPlayer.PLAYLISTs.Count() - 1)
+            if (selectedIndex < Dataprovider.Ins.mediaPlayer.MUSICs.Count() - 1)
             {
                 selectedIndex++;
                 PlayMusicAtIndex(selectedIndex);
